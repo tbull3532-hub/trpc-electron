@@ -2,6 +2,21 @@
   "name": "trpc-electron",
   "description": "Electron support for tRPC",
   "version": "0.1.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tbull3532-hub/trpc-electron.git",
+    "directory": "packages/trpc-electron"
+  },
+  "homepage": "https://github.com/tbull3532-hub/trpc-electron#readme",
+  "bugs": {
+    "url": "https://github.com/tbull3532-hub/trpc-electron/issues"
+  },
+  "keywords": [
+    "trpc",
+    "electron",
+    "rpc",
+    "ipc"
+  ],
   "exports": {
     "./main": {
       "types": "./dist/main.d.ts",
@@ -16,6 +31,7 @@
   },
   "author": "Mat Sz <contact@matsz.dev>",
   "license": "MIT",
+  "type": "module",
   "files": [
     "dist",
     "src",
@@ -28,7 +44,7 @@
     "copy:types": "cp dist/main.d.ts dist/renderer.d.ts ./",
     "test": "vitest -c vitest.config.ts",
     "test:ci": "vitest run -c vitest.config.ts --coverage",
-    "prepublishOnly": "corepack yarn build",
+    "prepublishOnly": "yarn build",
     "changeset": "changeset",
     "release": "changeset publish"
   },
@@ -44,6 +60,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "superjson": "^1.12.3",
+    "typescript": "^5.0.0",
     "vite": "^6.0.7",
     "vite-plugin-commonjs-externals": "^0.1.4",
     "vitest": "^2.1.8",
@@ -53,5 +70,8 @@
     "@trpc/client": ">=11.0.0",
     "@trpc/server": ">=11.0.0",
     "electron": ">19.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
